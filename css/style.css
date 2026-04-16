@@ -168,3 +168,26 @@ form button {
 form button:hover {
   background: #5a3e3e;
 }
+
+.testimonials {
+  background: #f3e5dc;
+}
+
+#reviews {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.review {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  width: 250px;
+  transition: 0.3s;
+}
+
+.review:hover {
+  transform: translateY(-5px);
+}
