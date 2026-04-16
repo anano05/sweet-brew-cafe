@@ -191,3 +191,23 @@ form button:hover {
 .review:hover {
   transform: translateY(-5px);
 }
+
+.cookie-box {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #6b4f4f;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.cookie-box button {
+  background: #ffd700;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}

@@ -47,3 +47,40 @@ if (toggleBtn) {
     }
   });
 }
+
+// ===== FETCH API (TESTIMONIALS) =====
+const reviewsContainer = document.getElementById("reviews");
+
+if (reviewsContainer) {
+  fetch("https://jsonplaceholder.typicode.com/comments?_limit=3")
+    .then((response) => response.json())
+    .then((data) => {
+      data.forEach((item) => {
+        const div = document.createElement("div");
+        div.classList.add("review");
+
+        div.innerHTML = `
+          <h4>${item.name}</h4>
+          <p>${item.body}</p>
+        `;
+
+        reviewsContainer.appendChild(div);
+      });
+    })
+    .catch((error) => console.log(error));
+}
+
+// ===== COOKIES (LOCAL STORAGE) =====
+const cookieBox = document.getElementById("cookieBox");
+const acceptBtn = document.getElementById("acceptCookies");
+
+if (cookieBox) {
+  if (localStorage.getItem("cookiesAccepted")) {
+    cookieBox.style.display = "none";
+  }
+
+  acceptBtn.addEventListener("click", () => {
+    localStorage.setItem("cookiesAccepted", "true");
+    cookieBox.style.display = "none";
+  });
+}
